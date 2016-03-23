@@ -1,0 +1,64 @@
+{
+  "name": "jsdoc-preview",
+  "version": "0.0.1",
+  "main": "./lib/main",
+  "description": "Open a rendered version of the JSDoc3 in the current editor with `ctrl-shift-d`.",
+  "repository": "https://github.com/deltaquadrant/atom-jsdoc-preview",
+  "license": "MIT",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.0",
+    "cheerio": "0.15.0",
+    "figlet": "1.0.8",
+    "fs-plus": "^2.0.0",
+    "grim": "^1.2.1",
+    "highlights": "^1.2",
+    "jsdoc": "git+https://github.com/deltaquadrant/jsdoc.git",
+    "temp": "^0.8.1",
+    "underscore-plus": "^1.0.0",
+    "wrench": "^1.5.0"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.9.7"
+  },
+  "deserializers": {
+    "JsdocPreviewView": "createJsdocPreviewView"
+  },
+  "configSchema": {
+    "breakOnSingleNewline": {
+      "type": "boolean",
+      "default": false,
+      "description": "Todo: remove"
+    },
+    "liveUpdate": {
+      "type": "boolean",
+      "default": true,
+      "description": "Re-render the preview as the contents of the source changes, without requiring the source buffer to be saved. If disabled, the preview is re-rendered only when the buffer is saved to disk."
+    },
+    "openPreviewInSplitPane": {
+      "type": "boolean",
+      "default": true,
+      "description": "Open the preview in a split pane. If disabled, the preview is opened in a new tab in the same pane."
+    },
+    "grammars": {
+      "type": "array",
+      "default": [
+        "source.gfm",
+        "source.litcoffee",
+        "text.html.basic",
+        "text.md",
+        "text.plain",
+        "text.plain.null-grammar"
+      ],
+      "description": "Todo: remove"
+    },
+    "useGitHubStyle": {
+      "title": "Use GitHub.com style",
+      "type": "boolean",
+      "default": false,
+      "description": "Todo: remove"
+    }
+  }
+}
