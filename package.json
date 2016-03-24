@@ -45,10 +45,9 @@
     "grammars": {
       "type": "array",
       "default": [
-        "source.gfm",
-        "source.litcoffee",
-        "text.html.basic",
-        "text.md",
+        "source.javascript",
+        "source.js",
+        "source.js.jsx",
         "text.plain",
         "text.plain.null-grammar"
       ],
